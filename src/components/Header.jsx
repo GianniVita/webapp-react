@@ -1,15 +1,27 @@
-import { NavLink } from 'react-router-dom';
-
+import { NavLink } from "react-router-dom";
 export default function Header() {
+    
+    const menu = [
+        {
+            id: 1,
+            text: 'Home',
+            link: '/'
+        },
+        {
+            id: 2,
+            text: 'Contact',
+            link: '/contacts'
+        }
+    ]
+  
     return (
 
-            <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
+            <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
                 <div className="container-fluid">
                     {/* Logo/Brand */}
                 <a className="navbar-brand" href="/">
                     <i className="bi bi-film me-2"></i>
-                    FilmApp
-                </a>
+                    FilmApp Reviews</a>
 
                 {/* Hamburger toggle button for mobile */}
                 <button
@@ -26,12 +38,17 @@ export default function Header() {
                 {/* Navigation links */}
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item">
-                            <a className="nav-link" href="/">
+                        {menu.map((item) =>
+                        
+                        <li className="nav-item" key={item.id}>
+                            <NavLink className="nav-link" to={item.link}>
                                 <i className="bi bi-house-door me-1"></i>
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
+                        )}
+                        
+                        
                         <li className="nav-item">
                             <a className="nav-link" href="/contacts">
                                 <i className="bi bi-envelope me-1"></i>
@@ -44,3 +61,9 @@ export default function Header() {
         </nav>
     );
 }
+    
+    
+    
+    
+    
+    

@@ -1,12 +1,16 @@
-
-import Header from './components/Header'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import DefaultLayout from './layouts/DefaultLayout'
+import HomePage from './pages/HomePage'
 
 function App() {
-  
-
   return (
-   <h1>Hello world</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<DefaultLayout />}>
+          <Route path="/" element={<HomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
