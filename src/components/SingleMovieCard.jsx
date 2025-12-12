@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function SingleMovieCard({ movie }) {
 
     return (
@@ -14,6 +16,9 @@ export default function SingleMovieCard({ movie }) {
                         {movie.title}
                     </h3>
                     <p>{movie.abstract}</p>
+                    <Link to={`/movies/${movie.id}`} className="btn btn-dark">
+                    More Details 
+                    </Link>
                 </div>
             </div>
 
