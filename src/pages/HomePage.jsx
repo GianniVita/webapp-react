@@ -1,6 +1,7 @@
-export default function HomePage(){
-    return(
-
-        <h1>Welcome to our Movie reviews app</h1>
+export default function HomePage() {
+    return (
+        <div className="text-center">
+            <h1>Welcome to our Movie reviews app</h1>
+        </div>
     )
 }
