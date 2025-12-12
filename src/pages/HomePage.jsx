@@ -41,16 +41,30 @@ export default function HomePage() {
         <div className="container">
             <div className="row">
                 {
-                    
+                  movies.map(movie =>
+                    <div className="col">
+                        <div className="card">
+                              <img src={movie.image} alt="" className="card-img-top" />
+                                <div className="card-body">
+                                    <h3 className="card-title">
+                                        {movie.title}
+                                    </h3>
+                                    <p>{movie.plot}</p>
+                                </div>
+                        </div>
+
+                    </div>
+                  )
                 }
-                <div className="col"></div>
             </div>
         </div>
        </section>
        
-       
-       
-       
        </>
     )
 }
+       
+                    
+
+       
+       
