@@ -14,6 +14,12 @@ export default function Header() {
             text: 'Contact',
             link: '/contacts',
             icon: 'bi-envelope'
+        },
+        {
+            id: 3,
+            text: 'Admin',
+            link: '/admin',
+            icon: 'bi-person-gear'
         }
     ]
 
