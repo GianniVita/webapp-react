@@ -1,7 +1,7 @@
-export default function MovieReviewForm(){
+export default function MovieReviewForm() {
 
 
-    return(
+    return (
         <section>
             <div className="container">
                 <h3>Leave Your Review</h3>
@@ -22,17 +22,18 @@ export default function MovieReviewForm(){
                     </div>
 
                     <div className="mb-3">
-                        <label for="vote" class="form-label">Vote/Rate</label>
+                        <label htmlFor="vote" className="form-label">Vote/Rate</label>
                         <select
-                            class="form-select"
+                            className="form-select form-select-sm"
                             name="vote"
-                            id="vote">
+                            id="vote"
+                            style={{ maxWidth: '200px' }}>
 
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
+                            <option value="1">⭐ 1 Star</option>
+                            <option value="2">⭐⭐ 2 Stars</option>
+                            <option value="3">⭐⭐⭐ 3 Stars</option>
+                            <option value="4">⭐⭐⭐⭐ 4 Stars</option>
+                            <option value="5">⭐⭐⭐⭐⭐ 5 Stars</option>
                         </select>
                     </div>
 

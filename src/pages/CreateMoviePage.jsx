@@ -31,7 +31,7 @@ export default function CreateMoviePage(){
                 name="director"
                 id="director"
                 aria-describedby="directorHelper"
-                placeholder="The Equalizer"
+                placeholder="John Vital"
             />
             <small id="directorHelper" class="form-text text-muted">Add Movie's Director</small>
         </div>
@@ -49,6 +49,16 @@ export default function CreateMoviePage(){
             />
             <div id="imageHelper" class="form-text">Upload the Movie's Image</div>
         </div>
+        <div class="mb-3">
+            <label for="abstract" class="form-label">Abstract</label>
+            <textarea class="form-control" name="abstract" id="abstract" rows="5" placeholder="write your lorem ipsum dolor here"></textarea>
+        </div>
+        
+        <button
+            type="submit"
+            class="btn btn-dark">
+            <i className="bi bi-floppy"></i> Save
+        </button>
         
 
 

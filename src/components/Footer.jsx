@@ -11,8 +11,28 @@ const footerMenus = [
             },
             {
                 id: 2,
+                text: 'Movies',
+                link: '/movies'
+            },
+            {
+                id: 3,
                 text: 'Contact',
                 link: '/contacts'
+            }
+        ]
+    },
+    {
+        title: 'Admin',
+        links: [
+            {
+                id: 1,
+                text: 'Dashboard',
+                link: '/admin'
+            },
+            {
+                id: 2,
+                text: 'Create Movie',
+                link: '/admin/movies/create'
             }
         ]
     },
@@ -22,12 +42,12 @@ const footerMenus = [
             {
                 id: 1,
                 text: 'Privacy Policy',
-                link: '/'
+                link: '#'
             },
             {
                 id: 2,
                 text: 'Terms and Conditions',
-                link: '/'
+                link: '#'
             }
         ]
     },
@@ -56,7 +76,7 @@ export default function Footer() {
                     ))}
 
                     {/* Social Media Links */}
-                    <div className="col-md-6 mb-3">
+                    <div className="col-md-3 mb-3">
                         <h5 className="text-uppercase mb-3">Follow Us</h5>
                         <div>
                             <a

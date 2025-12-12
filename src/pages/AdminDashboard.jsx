@@ -55,10 +55,10 @@ export default function AdminDashboard() {
                         <tbody className="table-group-divider">
                             {movies.map(movie =>
 
-                                <tr className="">
+                                <tr className="" key={movie.id}>
                                     <td scope="row">{movie.id}</td>
                                     <td>
-                                        <img width={60} src={movie.image} alt="" />
+                                        <img width={60} src={`/images/movies/${movie.image}`} alt={movie.title} className="rounded" />
                                     </td>
                                     <td>{movie.title}</td>
                                     <td>{movie.director}</td>
@@ -75,7 +75,7 @@ export default function AdminDashboard() {
                                             <button className="btn btn-sm btn-danger">
                                                 <i className="bi bi-trash"></i>
                                             </button>
-                                        </div>     
+                                        </div>
                                     </td>
                                 </tr>
 
