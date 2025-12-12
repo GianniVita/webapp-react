@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import MovieReviewList from "../components/MovieReviewList";
+import MovieReviewForm from "../components/MovieReviewForm";
 
 export default function MoviePage() {
 
@@ -39,6 +40,11 @@ export default function MoviePage() {
             </div>
 
             <hr />
+
+            <MovieReviewForm />
+
+            <hr />
+
             <MovieReviewList reviews={movie.reviews} />
         </div>
 
