@@ -31,7 +31,7 @@ export default function HomePage() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sit!
             </p>
             <button className="btn btn-primary btn-lg" type="button">
-                Example button
+                More Details
             </button>
         </div>
        </div>
