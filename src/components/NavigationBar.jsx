@@ -1,10 +1,8 @@
 import { NavLink } from "react-router-dom"
 
-export default function NavigationBar({menu}){
+export default function NavigationBar({ menu }) {
 
-
-
-    return(
+    return (
 
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
             <div className="container-fluid">
@@ -32,24 +30,16 @@ export default function NavigationBar({menu}){
 
                             <li className="nav-item" key={item.id}>
                                 <NavLink className="nav-link" to={item.link}>
-                                    <i className="bi bi-house-door me-1"></i>
-                                    Home
+                                    <i className={`bi ${item.icon} me-1`}></i>
+                                    {item.text}
                                 </NavLink>
                             </li>
                         )}
-
-
-                        <li className="nav-item">
-                            <a className="nav-link" href="/contacts">
-                                <i className="bi bi-envelope me-1"></i>
-                                Contacts
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     )
 
-    
+
 }

@@ -1,20 +1,22 @@
 import { NavLink } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
 export default function Header() {
-    
+
     const menu = [
         {
             id: 1,
             text: 'Home',
-            link: '/'
+            link: '/',
+            icon: 'bi-house-door'
         },
         {
             id: 2,
             text: 'Contact',
-            link: '/contacts'
+            link: '/contacts',
+            icon: 'bi-envelope'
         }
     ]
-  
+
     return (
         <header>
             <NavigationBar menu={menu} />
@@ -22,10 +24,10 @@ export default function Header() {
     );
 }
 
-           
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
