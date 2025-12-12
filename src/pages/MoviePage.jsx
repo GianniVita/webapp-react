@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
+import MovieReviewList from "../components/MovieReviewList";
 
 export default function MoviePage() {
 
@@ -38,33 +39,7 @@ export default function MoviePage() {
             </div>
 
             <hr />
-
-            <section id="reviewsList">
-                <div className="container">
-                    <h3 className="mb-4">Reviews</h3>
-
-                    {movie.reviews.map(review =>
-
-                        <div className="card p-3 mb-3" key={review.id}>
-                            <strong>{review.name}</strong>
-                            <p>
-                                {review.text}
-                            </p>
-                            <div className="vote">
-                                <i className="bi bi-star-fill"></i>
-                                <i className="bi bi-star-fill"></i>
-                                <i className="bi bi-star-fill"></i>
-                                <i className="bi bi-star"></i>
-                                <i className="bi bi-star"></i>
-                            </div>
-                        </div>
-
-
-
-                    )}
-                    
-                    </div>
-            </section>
+            <MovieReviewList reviews={movie.reviews} />
         </div>
 
     )
