@@ -49,7 +49,7 @@ export default function HomePage() {
                                     <h3 className="card-title">
                                         {movie.title}
                                     </h3>
-                                    <p>{movie.plot}</p>
+                                    <p>{movie.abstract}</p>
                                 </div>
                         </div>
 
