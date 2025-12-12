@@ -11,6 +11,7 @@ export default function HomePage() {
         axios.get('http://localhost:3000/api/movies')
         .then(response =>{
             console.log(response);
+            setMovies(response.data)
             
         }).catch(err =>{
             console.log(err.message);
@@ -21,13 +22,35 @@ export default function HomePage() {
     }, [])
 
 
-
-
-
-
     return (
-        <div className="text-center">
-            <h1>Welcome to our Movie reviews app</h1>
+       <>
+       <div className="p-5 mb-4 bg-light rounded-3">
+        <div className="container-fluid py-5">
+            <h1 className="display-5 fw-bold">Movies Reviews App</h1>
+            <p className="col-md-8 fs-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sit!
+            </p>
+            <button className="btn btn-primary btn-lg" type="button">
+                Example button
+            </button>
         </div>
+       </div>
+       
+       
+       <section className="my4 py-3">
+        <div className="container">
+            <div className="row">
+                {
+                    
+                }
+                <div className="col"></div>
+            </div>
+        </div>
+       </section>
+       
+       
+       
+       
+       </>
     )
 }
