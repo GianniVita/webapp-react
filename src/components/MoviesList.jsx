@@ -1,3 +1,5 @@
+import SingleMovieCard from "./SingleMovieCard";
+
 export default function MoviesList({movies}){
 
 
@@ -8,18 +10,7 @@ export default function MoviesList({movies}){
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
                     {
                         movies.map(movie =>
-                            <div className="col" key={movie.id}>
-                                <div className="card">
-                                    <img src={movie.image} alt="" className="card-img-top" />
-                                    <div className="card-body">
-                                        <h3 className="card-title">
-                                            {movie.title}
-                                        </h3>
-                                        <p>{movie.abstract}</p>
-                                    </div>
-                                </div>
-
-                            </div>
+                            <SingleMovieCard movie={movie} key={movie.id} />
                         )
                     }
                 </div>
