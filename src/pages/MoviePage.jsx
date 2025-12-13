@@ -9,7 +9,7 @@ export default function MoviePage() {
     const { id } = useParams();
     const [movie, setMovies] = useState(null);
 
-    useEffect(() => {
+    const fetchMovie = () => {
         axios.get(`http://localhost:3000/api/movies/${id}`)
             .then(response => {
                 console.log(response);
@@ -18,6 +18,10 @@ export default function MoviePage() {
             .catch(error => {
                 console.error("There was an error fetching the movie data!", error);
             });
+    };
+
+    useEffect(() => {
+        fetchMovie();
     }, [id]);
 
     if (!movie) {
@@ -41,7 +45,7 @@ export default function MoviePage() {
 
             <hr />
 
-            <MovieReviewForm />
+            <MovieReviewForm movieId={id} onReviewAdded={fetchMovie} />
 
             <hr />
 
