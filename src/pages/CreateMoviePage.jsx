@@ -35,7 +35,7 @@ export default function CreateMoviePage() {
         data.append('director', formData.director);
         data.append('genre', formData.genre);
         data.append('release_year', formData.release_year);
-        data.append('abstract', formData.abstract);
+        data.append('abstract', formData.abstract); 
         if (imageFile) {
             data.append('image', imageFile);
         }
